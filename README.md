@@ -26,7 +26,8 @@ It creates a new timestamped folder for each backup and is perfect for automatin
 
 1. **Clone the repo**
 2. install node modules
-3. npm start
+3. Add a valid mongodb connection string in the ENV file
+5. npm start
 
 📌 Why I Built This
 MongoDB Atlas free tier doesn't support automatic backups unless you upgrade. I used to export my production data manually every week — collection by collection. Now, with this tiny script and a bit of AI help, it's fully automated.
