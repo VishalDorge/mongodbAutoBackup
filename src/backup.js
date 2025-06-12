@@ -3,10 +3,12 @@ import fs from "fs-extra";
 import path from "path";
 import dayjs from "dayjs";
 import { fileURLToPath } from 'url';
+import dotenv from "dotenv";
+dotenv.config();
 
 // === CONFIG ===
-const MONGO_URI = "mongodb://localhost:27017";
-const DATABASE_NAME = "realx";
+const MONGO_URI = process.env.MONGO_URI;
+const DATABASE_NAME = process.env.DATABASE_NAME;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const BACKUP_DIR = path.join(__dirname, "..", "backups");
